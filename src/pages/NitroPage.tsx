@@ -41,7 +41,6 @@ const NitroPage = () => {
       <Navbar />
 
       <div className="max-w-6xl mx-auto px-4 py-12">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -54,7 +53,6 @@ const NitroPage = () => {
           <p className="text-xl text-white/70">Unlock premium features for an enhanced experience</p>
         </motion.div>
 
-        {/* Plans */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {plans.map((plan, index) => {
             const Icon = plan.icon;
@@ -107,49 +105,6 @@ const NitroPage = () => {
             );
           })}
         </div>
-
-        {/* Features Section */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-          className="card-glass p-8"
-        >
-          <h3 className="text-2xl font-bold mb-8">Premium Features</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                title: 'Animated Avatars',
-                desc: 'Show your personality with animated profile pictures',
-              },
-              {
-                title: 'Custom Themes',
-                desc: 'Personalize your profile with exclusive themes',
-              },
-              {
-                title: 'HD Calls',
-                desc: 'Crystal clear video and voice calls',
-              },
-              {
-                title: 'Screen Sharing',
-                desc: 'Share your screen during calls',
-              },
-              {
-                title: 'Special Effects',
-                desc: 'Add magical effects to your profile',
-              },
-              {
-                title: 'Exclusive Badges',
-                desc: 'Unlock rare and exclusive badges',
-              },
-            ].map((feature, i) => (
-              <div key={i} className="p-4 bg-white/5 rounded-lg border border-white/10">
-                <h4 className="font-bold mb-2">{feature.title}</h4>
-                <p className="text-sm text-white/50">{feature.desc}</p>
-              </div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </div>
   );
